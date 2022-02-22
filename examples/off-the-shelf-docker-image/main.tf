@@ -1,7 +1,7 @@
 locals {
-  up_args = "--advertise-exit-node"
-  authkey = "tskey-TBD"
-  vpc_id = "vpc-TBD"
+  up_args             = "--advertise-exit-node"
+  authkey             = "tskey-TBD"
+  vpc_id              = "vpc-TBD"
   state_parameter_arn = "arn:aws:ssm:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:parameter/tailscale-vpn-state"
 }
 module "tailscale" {

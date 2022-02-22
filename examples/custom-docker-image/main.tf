@@ -1,8 +1,8 @@
 locals {
-  up_args = "--advertise-exit-node"
-  authkey = "tskey-TBD"
-  vpc_id  = "vpc-TBD"
-  image   = "TBD.dkr.ecr.us-east-1.amazonaws.com/tailscale:TBD"
+  up_args             = "--advertise-exit-node"
+  authkey             = "tskey-TBD"
+  vpc_id              = "vpc-TBD"
+  image               = "TBD.dkr.ecr.us-east-1.amazonaws.com/tailscale:TBD"
   state_parameter_arn = "arn:aws:ssm:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:parameter/tailscale-vpn-state"
 }
 

@@ -6,7 +6,7 @@ variable "container_command" {
   default = null
 }
 variable "container_environment" {
-  type = list
+  type    = list(any)
   default = []
 }
 variable "subnets" {

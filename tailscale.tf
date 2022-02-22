@@ -2,7 +2,7 @@ data "aws_region" "current" {}
 data "aws_caller_identity" "current" {}
 
 locals {
-  name          = "tailscale-vpn"
+  name = "tailscale-vpn"
 }
 resource "aws_ecs_cluster" "default" {
   name = local.name
@@ -63,7 +63,7 @@ resource "aws_ecs_task_definition" "default" {
         }
       }
       environment = var.container_environment
-      command = var.container_command
+      command     = var.container_command
     }
   ])
   requires_compatibilities = ["FARGATE"]
