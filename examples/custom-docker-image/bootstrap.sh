@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function up() {
-    until /var/runtime/tailscale up --authkey=${TAILSCALE_AUTHKEY} ${TAILSCALE_UP_ARGS}
+    until tailscale up --authkey=${TAILSCALE_AUTHKEY} ${TAILSCALE_UP_ARGS}
     do
         sleep 0.1
     done
