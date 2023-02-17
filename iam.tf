@@ -8,6 +8,7 @@ data "aws_iam_policy_document" "ecs_tasks_service" {
 
       identifiers = [
         "ecs-tasks.amazonaws.com",
+        "ecs.amazonaws.com",
       ]
     }
   }
